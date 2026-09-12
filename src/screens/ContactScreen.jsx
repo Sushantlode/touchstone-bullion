@@ -65,12 +65,18 @@ export default function ContactScreen() {
             <div className="contact-company" data-reveal>
               <strong>{companyName}</strong>
               <a className="contact-mail" href={`mailto:${INQUIRY_EMAIL}`}>{INQUIRY_EMAIL}</a>
+              <div className="contact-person">
+                <span>Contact</span>
+                <strong>Yogesh Tillu</strong>
+                <a href="tel:+919028999279">+91 9028999279</a>
+              </div>
             </div>
             <div className="contact-channels" data-reveal>
               <div><span>Trading</span><strong>Gold trading enquiries</strong></div>
               <div><span>Suppliers</span><strong>Supplier registration</strong></div>
               <div><span>Buyers</span><strong>Institutional buyer enquiries</strong></div>
               <div><span>Partners</span><strong>Strategic partnership enquiries</strong></div>
+              <div><span>Refineries</span><strong>Refinery partnership enquiries</strong></div>
             </div>
             <div className="contact-visual" data-reveal>
               <img src={images.professionals} alt="Touchstone Bullion commercial team in Dubai" />

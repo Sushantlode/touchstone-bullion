@@ -28,8 +28,8 @@ export default function Footer() {
             <div>
               <span>Connect</span>
               <Link to="/contact">Business Enquiry</Link>
-              <Link to="/contact">Supplier Registration</Link>
-              <Link to="/contact">Trading Desk</Link>
+              <a href="mailto:yogeshtillu@ehealthsystems.in">yogeshtillu@ehealthsystems.in</a>
+              <a href="tel:+919028999279">Yogesh Tillu · +91 9028999279</a>
             </div>
           </div>
         </div>

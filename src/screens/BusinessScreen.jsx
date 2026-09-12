@@ -21,6 +21,14 @@ export default function BusinessScreen() {
           <div className="business-grid">
             {businessPillars.map(x => (
               <article className="business-card" key={x.title} data-reveal>
+                <img
+                  className="business-card__bg"
+                  src={images[x.image]}
+                  alt=""
+                  style={{ objectPosition: x.position || 'center' }}
+                  aria-hidden="true"
+                />
+                <div className="business-card__veil" aria-hidden="true" />
                 <div className="business-card__top"><i /></div>
                 <h3>{x.title}</h3>
                 <p>{x.text}</p>

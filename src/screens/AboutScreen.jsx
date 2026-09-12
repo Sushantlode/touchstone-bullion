@@ -34,13 +34,19 @@ export default function AboutScreen() {
             <div className="team-stagger__list">
               {team.map(person => (
                 <article className="team-stagger__item" key={person.name} data-reveal>
-                  <div className="team-stagger__photo">
+                  <div className={`team-stagger__photo${person.photo === 'smit' ? ' team-stagger__photo--smit' : ''}`}>
                     <img src={images[person.photo]} alt={`${person.name}, ${person.title}`} />
                   </div>
                   <div className="team-stagger__caption">
                     <h3>{person.name}</h3>
                     <p>{person.title}</p>
                     <p className="team-stagger__bio">{person.bio}</p>
+                    {(person.email || person.phone) && (
+                      <p className="team-stagger__contact">
+                        {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
+                        {person.phone && <a href={`tel:${person.phone.replace(/\s/g, '')}`}>{person.phone}</a>}
+                      </p>
+                    )}
                   </div>
                 </article>
               ))}

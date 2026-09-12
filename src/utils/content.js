@@ -12,19 +12,48 @@ export const homeFocus = [
 ]
 
 export const businessPillars = [
-  { title: 'Gold Bullion Trading', text: 'Purchase and sale of physical investment-grade gold and bullion according to agreed specifications and transaction terms.' },
-  { title: 'Gold Doré Trading', text: 'International sourcing and trading of gold doré from qualified and compliant suppliers, subject to due diligence and regulatory requirements.' },
-  { title: 'International Gold Supply', text: 'Structured gold supply arrangements for approved institutional and commercial buyers.' },
-  { title: 'Refinery & Strategic Partnerships', text: 'Development of relationships with refineries, mining companies, bullion traders, logistics providers and financial institutions.' },
+  {
+    title: 'Gold Bullion Trading',
+    text: 'Purchase and sale of physical investment-grade gold and bullion according to agreed specifications and transaction terms.',
+    image: 'productBullion',
+    position: 'center',
+  },
+  {
+    title: 'Gold Doré Trading',
+    text: 'International sourcing and trading of gold doré from qualified and compliant suppliers, subject to due diligence and regulatory requirements.',
+    image: 'productDore',
+    position: 'center',
+  },
+  {
+    title: 'Refined Gold',
+    text: 'Trading and supply of refined gold meeting agreed purity, assay and documentation standards for approved counterparties.',
+    image: 'productRefined',
+    position: 'center',
+  },
+  {
+    title: 'International Gold Supply',
+    text: 'Structured gold supply arrangements for approved institutional and commercial buyers.',
+    image: 'productInstitutional',
+    position: 'center 40%',
+  },
+  {
+    title: 'Refineries',
+    text: 'Partnerships with licensed refineries for assay, refining and conversion of doré and gold feedstock into refined product.',
+    image: 'partnerRefineries',
+    position: 'center 45%',
+  },
+  {
+    title: 'Strategic Partnerships',
+    text: 'Development of relationships with mining companies, bullion traders, logistics providers and financial institutions.',
+    image: 'partnerInvestors',
+    position: 'center',
+  },
 ]
 
 export const products = [
-  { title: 'Physical Gold', image: 'productPhysical', position: 'center' },
-  { title: 'Gold Bullion', image: 'productBullion', position: 'center' },
   { title: 'Gold Bars', image: 'productBars', position: '70% center' },
-  { title: 'Gold Doré', image: 'productDore', position: '78% center' },
-  { title: 'Refined Gold', image: 'productRefined', position: 'center' },
-  { title: 'Institutional Gold Supply', image: 'productInstitutional', position: 'center 60%' },
+  { title: 'Gold Bullion', image: 'productBullion', position: 'center' },
+  { title: 'Gold Doré', image: 'productDore', position: 'center' },
 ]
 
 export const tradingMarkets = [
@@ -61,12 +90,30 @@ export const complianceItems = [
 ]
 
 export const whyItems = [
-  ['Dubai Strategic Location', 'Access to one of the world’s important bullion trading hubs.'],
-  ['International Network', 'Relationships across mining, trading, refining and investment sectors.'],
-  ['Transparent Transactions', 'Structured documentation and clearly defined commercial terms.'],
-  ['Compliance Focus', 'KYC, AML and counterparty due-diligence processes.'],
-  ['Secure Supply Chain', 'Focus on verification, assay, logistics and responsible sourcing.'],
-  ['Long-Term Partnerships', 'Relationship-driven approach for suppliers, buyers and strategic partners.'],
+  [
+    'Dubai Strategic Location',
+    'Headquartered in Dubai, we operate from one of the world’s most important bullion trading hubs — with strong connectivity to international markets, logistics corridors, banking infrastructure and precious-metals counterparties across the Middle East, Africa, Asia and Europe.',
+  ],
+  [
+    'International Network',
+    'Our commercial relationships span mining companies, gold suppliers, refiners, institutional buyers, traders and investment partners. This network helps us structure reliable sourcing and supply channels while matching counterparties to suitable transaction opportunities.',
+  ],
+  [
+    'Transparent Transactions',
+    'Every engagement is built on clear commercial terms, structured documentation and agreed specifications. Pricing, settlement, logistics and delivery expectations are defined upfront so both sides understand the process before a transaction proceeds.',
+  ],
+  [
+    'Compliance Focus',
+    'We place strong emphasis on KYC, AML / CFT screening, sanctions checks and counterparty due diligence. Responsible sourcing principles guide how we evaluate suppliers, buyers and transaction flows before commercial commitment.',
+  ],
+  [
+    'Secure Supply Chain',
+    'From verification and assay through logistics and settlement, we focus on controlled handling of physical gold. Secure movement, documentation integrity and product authentication are treated as core parts of every trade, not optional extras.',
+  ],
+  [
+    'Long-Term Partnerships',
+    'We build lasting relationships with suppliers, buyers, refineries and strategic partners. Our approach favours repeatable, professionally managed collaboration over one-off deals — supporting stable trade, mutual trust and shared long-term growth.',
+  ],
 ]
 
 export const partnerItems = [
@@ -113,7 +160,7 @@ export const founder = {
 
 export const team = [
   {
-    name: 'Mr. Smit',
+    name: 'Mr. Smit Shinde',
     title: 'Project Director',
     bio: 'Supports the long-term direction of the business.',
     photo: 'smit',
