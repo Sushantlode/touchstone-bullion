@@ -1,0 +1,36 @@
+const base = import.meta.env.BASE_URL || '/'
+
+const asset = (path) => `${base}${path.replace(/^\//, '')}`
+
+export const images = {
+  professionals: asset('assets/a.jpeg'),
+  logistics: asset('assets/b.jpeg'),
+  goldBars: asset('assets/c.jpeg'),
+  boardroom: asset('assets/d.jpeg'),
+  heroDubai: asset('assets/e.jpeg'),
+  logo: asset('assets/logo.png'),
+  dubaiGold: asset('assets/g.jpeg'),
+  mining: asset('assets/h.jpeg'),
+  homeVideo: asset('assets/homescreenvidio.mp4'),
+  neelesh: asset('assets/nsk.jpeg'),
+  smit: asset('assets/smith.jpeg'),
+  yogesh: asset('assets/yogesh.jpeg'),
+  productPhysical: asset('assets/product-physical-photo.jpg'),
+  productBullion: asset('assets/product-bullion-photo.jpg'),
+  productBars: asset('assets/product-bars-photo.jpg'),
+  productDore: asset('assets/product-dore-photo.jpg'),
+  productRefined: asset('assets/product-refined-photo.jpg'),
+  productInstitutional: asset('assets/product-institutional-photo.jpg'),
+  marketUae: asset('assets/market-uae.jpg'),
+  marketAfrica: asset('assets/market-africa.jpg'),
+  marketAsia: asset('assets/market-asia.jpg'),
+  marketEurope: asset('assets/market-europe.jpg'),
+  marketMauritius: asset('assets/market-mauritius.jpg'),
+  marketIndia: asset('assets/market-india.jpg'),
+  partnerSuppliers: asset('assets/partner-suppliers.jpg'),
+  partnerBuyers: asset('assets/partner-buyers.jpg'),
+  partnerMining: asset('assets/partner-mining.jpg'),
+  partnerRefineries: asset('assets/partner-refineries.jpg'),
+  partnerBanks: asset('assets/partner-banks.jpg'),
+  partnerInvestors: asset('assets/partner-investors.jpg'),
+}
