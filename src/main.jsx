@@ -6,7 +6,7 @@ import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Touchstone_Bullion_React_Vite_MultiScreen_10_10">
+    <BrowserRouter basename="/touchstone-bullion">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
