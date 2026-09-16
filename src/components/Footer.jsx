@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BrandMark from './BrandMark.jsx'
-import { companyName, positioning } from '../utils/content.js'
+import { companyName, positioning, inquiryEmail } from '../utils/content.js'
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
             <div>
               <span>Connect</span>
               <Link to="/contact">Business Enquiry</Link>
-              <a href="mailto:sushantlode007@gmail.com">sushantlode007@gmail.com</a>
+              <a href={`mailto:${inquiryEmail}`}>{inquiryEmail}</a>
               <a href="tel:+919028999279">Yogesh Tillu · +91 9028999279</a>
             </div>
           </div>

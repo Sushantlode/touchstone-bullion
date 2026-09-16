@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import PageHero from '../components/PageHero.jsx'
 import { images } from '../utils/images.js'
-import { companyName } from '../utils/content.js'
-
-const INQUIRY_EMAIL = 'sushantlode007@gmail.com'
+import { companyName, inquiryEmail } from '../utils/content.js'
 
 export default function ContactScreen() {
   const [status, setStatus] = useState(null)
@@ -18,13 +16,14 @@ export default function ContactScreen() {
     setStatus({ type: 'pending', text: 'Sending your enquiry…' })
 
     const data = new FormData(form)
+    data.delete('gotcha')
     data.set('_subject', `Touchstone Bullion enquiry — ${data.get('enquiry_type') || 'Website'}`)
     data.set('_template', 'table')
     data.set('_captcha', 'false')
     data.set('_replyto', data.get('email'))
 
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${INQUIRY_EMAIL}`, {
+      const res = await fetch(`https://formsubmit.co/ajax/${inquiryEmail}`, {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
@@ -36,7 +35,7 @@ export default function ContactScreen() {
       if (needsActivation && /activ/i.test(message)) {
         setStatus({
           type: 'pending',
-          text: `Check ${INQUIRY_EMAIL} (and spam) for an email from FormSubmit. Open it and click “Activate Form”. After that, submit this enquiry again and it will be delivered.`,
+          text: `Check ${inquiryEmail} (and spam) for an email from FormSubmit. Open it and click “Activate Form”. After that, submit this enquiry again and it will be delivered.`,
         })
         return
       }
@@ -48,7 +47,7 @@ export default function ContactScreen() {
     } catch {
       setStatus({
         type: 'error',
-        text: `Could not send right now. Please email ${INQUIRY_EMAIL} directly.`,
+        text: `Could not send right now. Please email ${inquiryEmail} directly.`,
       })
     } finally {
       setSending(false)
@@ -64,7 +63,7 @@ export default function ContactScreen() {
           <div>
             <div className="contact-company" data-reveal>
               <strong>{companyName}</strong>
-              <a className="contact-mail" href={`mailto:${INQUIRY_EMAIL}`}>{INQUIRY_EMAIL}</a>
+              <a className="contact-mail" href={`mailto:${inquiryEmail}`}>{inquiryEmail}</a>
               <div className="contact-person">
                 <span>Contact</span>
                 <strong>Yogesh Tillu</strong>
@@ -117,7 +116,7 @@ export default function ContactScreen() {
               <button className="btn btn--gold form-submit" type="submit" disabled={sending}>
                 {sending ? 'Sending…' : 'Submit Enquiry'} <span>↗</span>
               </button>
-              <p className="form-privacy">Enquiries are sent to {INQUIRY_EMAIL}. By submitting, you agree to be contacted about this request.</p>
+              <p className="form-privacy">Enquiries are sent to {inquiryEmail}. By submitting, you agree to be contacted about this request.</p>
               {status && (
                 <div className={`form-status form-status--${status.type}`} role="status">
                   {status.text}
