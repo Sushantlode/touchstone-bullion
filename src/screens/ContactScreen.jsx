@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PageHero from '../components/PageHero.jsx'
 import { images } from '../utils/images.js'
 import { companyName, inquiryEmail } from '../utils/content.js'
@@ -7,13 +7,26 @@ export default function ContactScreen() {
   const [status, setStatus] = useState(null)
   const [sending, setSending] = useState(false)
 
+  useEffect(() => {
+    if (status?.type !== 'ok') return undefined
+    const onKey = (e) => {
+      if (e.key === 'Escape') setStatus(null)
+    }
+    document.body.style.overflow = 'hidden'
+    addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      removeEventListener('keydown', onKey)
+    }
+  }, [status])
+
   const submit = async (e) => {
     e.preventDefault()
     const form = e.currentTarget
     if (form.elements.gotcha?.value) return
 
     setSending(true)
-    setStatus({ type: 'pending', text: 'Sending your enquiry…' })
+    setStatus(null)
 
     const data = new FormData(form)
     data.delete('gotcha')
@@ -28,26 +41,13 @@ export default function ContactScreen() {
         headers: { Accept: 'application/json' },
         body: data,
       })
-      const json = await res.json().catch(() => ({}))
-      const message = String(json.message || '')
-      const needsActivation = /activ/i.test(message) || json.success === 'false' || json.success === false
-
-      if (needsActivation && /activ/i.test(message)) {
-        setStatus({
-          type: 'pending',
-          text: `Check ${inquiryEmail} (and spam) for an email from FormSubmit. Open it and click “Activate Form”. After that, submit this enquiry again and it will be delivered.`,
-        })
-        return
-      }
-
-      const ok = res.ok && json.success !== false && json.success !== 'false'
-      if (!ok) throw new Error(message || 'Send failed')
+      if (!res.ok) throw new Error('Send failed')
       form.reset()
-      setStatus({ type: 'ok', text: 'Thank you. Your enquiry has been sent. We will respond shortly.' })
+      setStatus({ type: 'ok' })
     } catch {
       setStatus({
         type: 'error',
-        text: `Could not send right now. Please email ${inquiryEmail} directly.`,
+        text: 'Could not send right now. Please try again shortly.',
       })
     } finally {
       setSending(false)
@@ -117,8 +117,8 @@ export default function ContactScreen() {
                 {sending ? 'Sending…' : 'Submit Enquiry'} <span>↗</span>
               </button>
               <p className="form-privacy">Enquiries are sent to {inquiryEmail}. By submitting, you agree to be contacted about this request.</p>
-              {status && (
-                <div className={`form-status form-status--${status.type}`} role="status">
+              {status?.type === 'error' && (
+                <div className="form-status form-status--error" role="status">
                   {status.text}
                 </div>
               )}
@@ -126,6 +126,17 @@ export default function ContactScreen() {
           </div>
         </div>
       </section>
+
+      {status?.type === 'ok' && (
+        <div className="enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="enquiry-ok-title">
+          <button className="enquiry-modal__veil" type="button" aria-label="Close" onClick={() => setStatus(null)} />
+          <div className="enquiry-modal__card">
+            <h2 id="enquiry-ok-title">Enquiry sent</h2>
+            <p role="status">Thank you. Your enquiry has been sent. We will respond shortly.</p>
+            <button className="btn btn--gold" type="button" onClick={() => setStatus(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </>
   )
 }

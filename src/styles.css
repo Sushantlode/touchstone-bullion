@@ -678,6 +678,48 @@ body.nav-open { overflow: hidden; }
 .form-submit:disabled { opacity: .65; cursor: wait; transform: none; }
 .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+.enquiry-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.enquiry-modal__veil {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(28, 20, 8, .62);
+  cursor: pointer;
+}
+.enquiry-modal__card {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  padding: 36px 32px 28px;
+  text-align: center;
+  background: #fffdf6;
+  border: 1px solid rgba(224, 179, 74, .4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  animation: screenRise .45s var(--ease-out);
+}
+.enquiry-modal__card h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.enquiry-modal__card p {
+  margin: 14px 0 26px;
+  color: var(--mineral);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+.enquiry-modal__card .btn { min-width: 140px; }
+
 /* Footer */
 .footer { background: linear-gradient(180deg, #3D2A10, #1C1408); color: var(--platinum); padding: 72px 0 45px; }
 .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 70px; }
