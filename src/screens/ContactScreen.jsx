@@ -3,7 +3,7 @@ import PageHero from '../components/PageHero.jsx'
 import { images } from '../utils/images.js'
 import { companyName } from '../utils/content.js'
 
-const INQUIRY_EMAIL = 'yogeshtillu@ehealthsystems.in'
+const INQUIRY_EMAIL = 'sushantlode007@gmail.com'
 
 export default function ContactScreen() {
   const [status, setStatus] = useState(null)
