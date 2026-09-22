@@ -41,7 +41,7 @@ export default function HomeScreen() {
           </div>
         </div>
         <div className="scroll-indicator" aria-hidden="true">
-          <span>SCROLL</span>
+          {/* <span>SCROLL</span> */}
           <i />
         </div>
       </section>

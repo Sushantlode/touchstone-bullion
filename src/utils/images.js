@@ -15,6 +15,7 @@ export const images = {
   neelesh: asset('assets/nsk.jpeg'),
   smit: asset('assets/smith.jpeg'),
   yogesh: asset('assets/yogesh.jpeg'),
+  shubham: asset('assets/shubham.jpeg'),
   productPhysical: asset('assets/product-physical-photo.jpg'),
   productBullion: asset('assets/product-bullion-bars.jpg'),
   productBars: asset('assets/product-bars-photo.jpg'),

@@ -151,15 +151,15 @@ export const aboutCopy = [
 ]
 
 export const visionMission = [
-  ['Vision', 'To become a trusted Dubai-based precious-metals trading company connecting global gold markets through transparency, professionalism and responsible business practices.'],
-  ['Mission', 'To create secure and efficient gold trading channels between producers, suppliers, refiners, institutional buyers and international markets.'],
+  ['Vision', 'A globally trusted, integrated destination for precious-metals sourcing, buying, selling, and trading.Connecting key international gold markets through a strategically positioned Dubai-based trading platform.Delivering seamless, transparent, secure, and professionally managed transactions aligned with global business standards.Building enduring partnerships through integrity, reliability, operational excellence, and responsible business practices.'],
+  ['Mission', 'Creating secure, efficient, and transparent channels across the global precious-metals value chain.Connecting producers, suppliers, refiners, institutional buyers, and international markets through a trusted Dubai-based platform.Facilitating seamless sourcing, buying, selling, and trading through professional and responsible business practices.Strengthening long-term global partnerships through integrity, reliability, operational excellence, and consistent value creation.'],
 ]
 
 export const founder = {
-  name: 'Mr. Neelesh Kanade',
+  name: 'Mr. Nilesh Kanade',
   title: 'Founder',
   location: companyName,
-  bio: `Mr. Neelesh Kanade is the founder of ${companyName} He sets the commercial direction for the company, established in 2026, connecting producers, suppliers, refiners and institutional buyers with international gold markets.`,
+  bio: `Mr. Nilesh Kanade is the founder of ${companyName} He sets the commercial direction for the company, established in 2026, connecting producers, suppliers, refiners and institutional buyers with international gold markets.`,
 }
 
 export const team = [
@@ -174,5 +174,11 @@ export const team = [
     title: 'Manager — Operations',
     bio: 'Oversees daily operations, documentation and counterparty coordination.',
     photo: 'yogesh',
+  },
+  {
+    name: 'Mr. Shubham Sonawane',
+    title: 'Strategic Partnership Consultant',
+    bio: 'Develops strategic partnerships and supports long-term commercial relationships.',
+    photo: 'shubham',
   },
 ]

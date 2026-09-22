@@ -34,7 +34,7 @@ export default function AboutScreen() {
             <div className="team-stagger__list">
               {team.map(person => (
                 <article className="team-stagger__item" key={person.name} data-reveal>
-                  <div className={`team-stagger__photo${person.photo === 'smit' ? ' team-stagger__photo--smit' : ''}`}>
+                  <div className={`team-stagger__photo team-stagger__photo--${person.photo}`}>
                     <img src={images[person.photo]} alt={`${person.name}, ${person.title}`} />
                   </div>
                   <div className="team-stagger__caption">
