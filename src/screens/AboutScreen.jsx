@@ -4,7 +4,7 @@ import PhotoSplit from '../components/PhotoSplit.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import CTA from '../components/CTA.jsx'
 import { images } from '../utils/images.js'
-import { aboutCopy, visionMission, founder, team, companyName } from '../utils/content.js'
+import { aboutCopy, founder, team, companyName } from '../utils/content.js'
 
 export default function AboutScreen() {
   return (
@@ -69,17 +69,6 @@ export default function AboutScreen() {
               ))}
             </div>
           </PhotoSplit>
-        </div>
-      </section>
-
-      <section className="section section--green">
-        <div className="container dual-statement">
-          {visionMission.map(([title, text]) => (
-            <article key={title} data-reveal>
-              <h2>{title}</h2>
-              <p>{text}</p>
-            </article>
-          ))}
         </div>
       </section>
       <CTA />

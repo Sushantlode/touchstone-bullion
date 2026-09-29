@@ -9,7 +9,6 @@ const nav = [
   ['Our Business', '/business'],
   ['Global Network', '/global-network'],
   ['Compliance', '/compliance'],
-  ['Partners', '/partners'],
   ['Contact', '/contact'],
 ]
 

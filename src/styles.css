@@ -275,6 +275,7 @@ body.nav-open { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 6px;
   padding: 0;
   border-top: 0;
@@ -286,7 +287,8 @@ body.nav-open { overflow: hidden; }
   letter-spacing: .08em;
   text-transform: uppercase;
   position: relative;
-  flex: 1;
+  flex: 0 0 auto;
+  white-space: nowrap;
   text-align: center;
   padding: 10px 6px;
   border-radius: 999px;
