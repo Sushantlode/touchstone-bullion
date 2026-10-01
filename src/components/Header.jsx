@@ -7,6 +7,7 @@ const nav = [
   ['About', '/about'],
   ['Gold Trading', '/gold-trading'],
   ['Our Business', '/business'],
+  ['Global Commodities', '/global-commodities'],
   ['Global Network', '/global-network'],
   ['Compliance', '/compliance'],
   ['Contact', '/contact'],

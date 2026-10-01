@@ -4,6 +4,7 @@ import SiteLayout from './components/SiteLayout.jsx'
 import HomeScreen from './screens/HomeScreen.jsx'
 import AboutScreen from './screens/AboutScreen.jsx'
 import BusinessScreen from './screens/BusinessScreen.jsx'
+import CommoditiesScreen from './screens/CommoditiesScreen.jsx'
 import GoldTradingScreen from './screens/GoldTradingScreen.jsx'
 import ComplianceScreen from './screens/ComplianceScreen.jsx'
 import NetworkScreen from './screens/NetworkScreen.jsx'
@@ -18,6 +19,7 @@ export default function App() {
         <Route index element={<HomeScreen />} />
         <Route path="about" element={<AboutScreen />} />
         <Route path="business" element={<BusinessScreen />} />
+        <Route path="global-commodities" element={<CommoditiesScreen />} />
         <Route path="gold-trading" element={<GoldTradingScreen />} />
         <Route path="compliance" element={<ComplianceScreen />} />
         <Route path="global-network" element={<NetworkScreen />} />

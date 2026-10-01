@@ -276,15 +276,15 @@ body.nav-open { overflow: hidden; }
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 6px;
+  gap: 4px;
   padding: 0;
   border-top: 0;
 }
 .desktop-nav a {
   color: var(--gold-ink);
-  font-size: .78rem;
+  font-size: .7rem;
   font-weight: 700;
-  letter-spacing: .08em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   position: relative;
   flex: 0 0 auto;

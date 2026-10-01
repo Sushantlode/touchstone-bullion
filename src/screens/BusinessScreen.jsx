@@ -19,7 +19,7 @@ export default function BusinessScreen() {
       <section className="section section--onyx">
         <div className="container">
           <div className="business-grid">
-            {businessPillars.map(x => (
+            {businessPillars.slice(3).map(x => (
               <article className="business-card" key={x.title} data-reveal>
                 <img
                   className="business-card__bg"

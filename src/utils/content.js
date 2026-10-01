@@ -52,14 +52,18 @@ export const businessPillars = [
   },
 ]
 
-export const products = [
-  { title: 'Gold Bars', image: 'productBars', position: '70% center' },
-  { title: 'Gold Bullion', image: 'productBullion', position: 'center' },
-  { title: 'Gold Doré', image: 'productDore', position: 'center' },
+export const commodities = [
   { title: 'Silver', image: 'productSilver', position: '22% center' },
   { title: 'Copper', image: 'productCopper', position: 'center' },
   { title: 'Lithium', image: 'productLithium', position: 'center' },
   { title: 'Iron Ore', image: 'productIronOre', position: '72% 78%' },
+  { title: 'Timber', image: 'productTimber', position: 'center' },
+]
+
+export const products = [
+  { title: 'Gold Bars', image: 'productBars', position: '70% center' },
+  { title: 'Gold Bullion', image: 'productBullion', position: 'center' },
+  { title: 'Gold Doré', image: 'productDore', position: 'center' },
 ]
 
 export const tradingMarkets = [
