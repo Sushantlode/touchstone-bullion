@@ -28,7 +28,7 @@ export const images = {
   productIronOre: asset('assets/product-iron-ore.jpg'),
   productTimber: asset('assets/product-timber-planks.jpg'),
   marketUae: asset('assets/market-uae.jpg'),
-  marketDubai: asset('assets/market-dubai.jpg'),
+  marketDubai: asset('assets/market-dubai-skyline-dusk.jpg'),
   marketAfrica: asset('assets/market-africa.jpg'),
   marketAsia: asset('assets/market-asia.jpg'),
   marketEurope: asset('assets/market-europe.jpg'),
