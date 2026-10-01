@@ -67,11 +67,13 @@ export const products = [
 ]
 
 export const tradingMarkets = [
-  { title: 'UAE', image: 'marketUae', position: 'center' },
+  { title: 'Dubai', image: 'marketDubai', position: 'center 28%' },
   { title: 'Africa', image: 'marketAfrica', position: 'center 40%' },
+  { title: 'Mauritius', image: 'marketMauritius', position: 'center 60%' },
   { title: 'Asia', image: 'marketAsia', position: 'center' },
   { title: 'Europe', image: 'marketEurope', position: 'center' },
-  { title: 'Mauritius', image: 'marketMauritius', position: 'center 60%' },
+  { title: 'Canada', image: 'marketCanada', position: 'center 46%' },
+  { title: 'USA', image: 'marketUsa', position: 'center 70%' },
   { title: 'India', image: 'marketIndia', position: 'center' },
 ]
 
