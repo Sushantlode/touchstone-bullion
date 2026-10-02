@@ -159,8 +159,18 @@ export const aboutCopy = [
 ]
 
 export const visionMission = [
-  ['Vision', 'A globally trusted, integrated destination for precious-metals sourcing, buying, selling, and trading.Connecting key international gold markets through a strategically positioned Dubai-based trading platform.Delivering seamless, transparent, secure, and professionally managed transactions aligned with global business standards.Building enduring partnerships through integrity, reliability, operational excellence, and responsible business practices.'],
-  ['Mission', 'Creating secure, efficient, and transparent channels across the global precious-metals value chain.Connecting producers, suppliers, refiners, institutional buyers, and international markets through a trusted Dubai-based platform.Facilitating seamless sourcing, buying, selling, and trading through professional and responsible business practices.Strengthening long-term global partnerships through integrity, reliability, operational excellence, and consistent value creation.'],
+  ['Vision', [
+    'A globally trusted, integrated destination for precious-metals sourcing, buying, selling, and trading.',
+    'Connecting key international gold markets through a strategically positioned Dubai-based trading platform.',
+    'Delivering seamless, transparent, secure, and professionally managed transactions aligned with global business standards.',
+    'Building enduring partnerships through integrity, reliability, operational excellence, and responsible business practices.',
+  ]],
+  ['Mission', [
+    'Creating secure, efficient, and transparent channels across the global precious-metals value chain.',
+    'Connecting producers, suppliers, refiners, institutional buyers, and international markets through a trusted Dubai-based platform.',
+    'Facilitating seamless sourcing, buying, selling, and trading through professional and responsible business practices.',
+    'Strengthening long-term global partnerships through integrity, reliability, operational excellence, and consistent value creation.',
+  ]],
 ]
 
 export const founder = {

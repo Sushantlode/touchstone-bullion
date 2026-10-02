@@ -69,10 +69,14 @@ export default function HomeScreen() {
 
       <section className="section section--green">
         <div className="container dual-statement">
-          {visionMission.map(([title, text]) => (
+          {visionMission.map(([title, points]) => (
             <article key={title} data-reveal>
               <h2>{title}</h2>
-              <p>{text}</p>
+              <ul>
+                {points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
