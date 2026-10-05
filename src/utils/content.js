@@ -2,7 +2,7 @@ export const tagline = 'Trusted Gold. Global Trade.'
 
 export const companyName = 'Touchstone Bullion Gold Trading LLC, Dubai, UAE.'
 
-export const inquiryEmail = 'yogeshtillu@ehealthsystems.in'
+export const inquiryEmail = 'support@touchstonebullion.com'
 
 export const positioning = 'Gold Trading · Bullion · Precious Metals · Global Partnerships'
 
