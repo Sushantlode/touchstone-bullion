@@ -24,8 +24,8 @@ export default function BrandMark({ compact = false }) {
         if (e.animationName === 'logoBurst') setBurst(false)
       }}
     >
-      <span className="brand__frame">
-        <span className="brand__shine" aria-hidden="true" />
+      <span>
+        <span/>
         <img className="brand__logo" src={images.logo} alt={companyName} />
       </span>
     </Link>
